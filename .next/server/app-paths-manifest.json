@@ -1,7 +1,7 @@
 {
-  "/alumni/page": "app/alumni/page.js",
-  "/contact_us/page": "app/contact_us/page.js",
-  "/about_us/page": "app/about_us/page.js",
-  "/contact_us/FAQ/page": "app/contact_us/FAQ/page.js",
-  "/contact_us/Contacts/page": "app/contact_us/Contacts/page.js"
+  "/news/Campus/page": "app/news/Campus/page.js",
+  "/news/In/page": "app/news/In/page.js",
+  "/news/Free/page": "app/news/Free/page.js",
+  "/news/Notice/page": "app/news/Notice/page.js",
+  "/news/Events/page": "app/news/Events/page.js"
 }

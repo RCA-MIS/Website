@@ -26,12 +26,45 @@ interface singleNews{
 }
 
 const About = () => {
-    const [news, setNews] = useState([{
-        title: "",
-        content: "",
-        date: "",
-        image: newOne
-    }])
+    const dummyNews = [
+        {
+            image: newOne,
+            title:"World Bank Fund RCA tomorrow",
+            content:"We're thrilled to share a notable accomplishment from our RCA community.",
+            date:"Sunday 24th September, 2020"
+        },
+        {
+            image: newOne,
+            title:"Experts from South Korea at RCA",
+            content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
+            date:"Sunday 24th September, 2020"
+        },
+        {
+            image: newOne,
+            title:"RCA reaches the National level in Basketball",
+            content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
+            date:"Sunday 24th September, 2020"
+        },
+        {
+            image: newOne,
+            title:"Year 3 students visit to RCAA",
+            content:"A visit from the World Bank at RCA, showcasing the nurtured talents at the school.",
+            date:"Sunday 24th September, 2020"
+        },
+        {
+            image: newOne,
+            title:"RCA at the 19th ILO Regional Seminar",
+            content:"Two RCA students showcase their prototype application called “KUICK RENT”.",
+            date:"Sunday 24th September, 2020"
+        },
+        {
+            image: newOne,
+            title:"1st cohort  pF RCA participates in the NE",
+            content:"At the first time RCA participates in the NE, it scores the highest nationwide",
+            date:"Sunday 24th September, 2020"
+        },
+    ]
+    const [news, setNews] = useState(dummyNews)
     useEffect(()=>{
        const fetchNews = async ()=>{
             const res = await axios.get("http://194.163.167.131:8060/news/all", {
@@ -40,13 +73,12 @@ const About = () => {
                 }
             })
             
-            setNews(res.data)
+            setNews(res.data ? res.data : dummyNews)
             return res.data
         }
 
         fetchNews()
     })
-    console.log("news noted", news)
     let newsArray = news || [
         {
             image: newOne,
@@ -100,13 +132,12 @@ const About = () => {
     //     },
     // ]
     const [newsPaper, setNewsPaper] = useState(newsArray[0])
-    console.log(newsArray, newsPaper)
 
     return (
         <div className="flex flex-col w-full md:flex-row">
             <div className="w-full md:w-3/5 pl-4">
 
-                <h5 className="font-bold mb-4 ml-4">News Papers &gt; <Link href={"/"} className="text-[#523873]">Campus news</Link></h5>
+                <h5 className="font-bold mb-4 ml-4">News Papers &gt; <Link href={"/"} className="text-[#523873]">Free square</Link></h5>
                 <Newspaper title={newsPaper.title} content={newsPaper.content} date={newsPaper.date} appreciations={"298"} feedbackMessages={"290"} buttonText={"Write to us about our News"} />
             </div>
             <div className="flex flex-col h-full md:w-2/5 gap-4">
