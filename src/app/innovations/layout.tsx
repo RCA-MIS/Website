@@ -18,7 +18,7 @@ export default function PageLayout({
       {/* <PublicationProvider data={innovations}> */}
         <Navbar/>
         <Hero pageTitle={"RCA Innovation Hub"} heroContent={"Rwanda Coding Academy focuses on enlarging its students’ ways of thinking for them to think of the most effective ways to apply what they learn in the real world With this is mind, students are given freedom to explore and some up with ideas of their own and also provided with the tools necessary for that."}/>
-        <div className="dynamic-content-container p-12 flex">
+        <div className="dynamic-content-container p-12 flex relative">
                 <Sidemenu parent={"innovations"} tabs={["Research and Publications", "Startups", "Research In News", "Fundarisations"]}/>
                 
                 {children}

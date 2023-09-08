@@ -1,8 +1,4 @@
 {
-  "/alumni/page": "app/alumni/page.js",
-  "/alumni/Alumni/page": "app/alumni/Alumni/page.js",
-  "/alumni/Living/page": "app/alumni/Living/page.js",
-  "/alumni/Galley/page": "app/alumni/Galley/page.js",
-  "/alumni/contributions/page": "app/alumni/contributions/page.js",
-  "/academics/Graduates/page": "app/academics/Graduates/page.js"
+  "/about_us/page": "app/about_us/page.js",
+  "/about_us/Strategy/page": "app/about_us/Strategy/page.js"
 }

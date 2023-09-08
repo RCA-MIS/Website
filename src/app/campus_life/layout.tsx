@@ -12,7 +12,7 @@ export default function AboutUsLayout({
       <>
         <Navbar/>
         <Hero pageTitle={"Campus Life at RCA"} heroContent={"Rwanda Coding Academy Campus is situated in the western part of the country, in Nyabihu, a perfect atmosphere for learning. The academy has a vast campus and an environment comprising talented students from all parts of the country, together creating an enjoyable and diverse experience for learning."}/>
-        <div className="dynamic-content-container p-12 flex">
+        <div className="dynamic-content-container p-12 flex relative">
             <Sidemenu parent={"campus_life"} tabs={["Academic Year", "Accomodation", "Student Activities", "School Clubs", "Sports and Leisure", "Gallery and Videos"]}/>
             {children}
         </div>
