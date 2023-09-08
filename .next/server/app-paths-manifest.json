@@ -1,7 +1,7 @@
 {
   "/alumni/page": "app/alumni/page.js",
   "/contact_us/page": "app/contact_us/page.js",
+  "/about_us/page": "app/about_us/page.js",
   "/contact_us/FAQ/page": "app/contact_us/FAQ/page.js",
-  "/alumni/Galley/page": "app/alumni/Galley/page.js",
   "/contact_us/Contacts/page": "app/contact_us/Contacts/page.js"
 }

@@ -25,19 +25,18 @@ interface singleNews{
     image: StaticImageData
 }
 
-export const getStaticProps = async ()=>{
-    const res = axios.get("http://194.163.167.131:8060/news/all", {
+export const fetchNews = async ()=>{
+    const res = await axios.get("http://194.163.167.131:8060/news/all", {
         headers:{
             authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
         }
     })
-    const newsData = res;
-    return{
-        props: {news: newsData}
-    }
+    
+    return res.data
 }
 
-const About = ({news}: Props) => {
+const About = async () => {
+    const news = await fetchNews()
     console.log("news noted", news)
     let newsArray = news || [
         {
@@ -105,7 +104,7 @@ const About = ({news}: Props) => {
                 <h4 className="text-[#523873] font-extrabold">Trending News</h4>
 
                 <div className="w-full overflow-y-auto">
-                    {newsArray.map((news=>{
+                    {newsArray.map(((news:any)=>{
                         return(
                             <News image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
                         )
