@@ -1,4 +1,6 @@
 {
   "/about_us/page": "app/about_us/page.js",
-  "/about_us/Strategy/page": "app/about_us/Strategy/page.js"
+  "/about_us/StackHolders/page": "app/about_us/StackHolders/page.js",
+  "/about_us/Strategy/page": "app/about_us/Strategy/page.js",
+  "/about_us/Campuses/page": "app/about_us/Campuses/page.js"
 }

@@ -40,17 +40,33 @@
         "async": false
       }
     },
-    "(app-client)/./src/app/page.tsx": {
+    "(app-client)/./node_modules/next/dist/client/image-component.js": {
       "*": {
-        "id": "(sc_client)/./src/app/page.tsx",
+        "id": "(sc_client)/./node_modules/next/dist/client/image-component.js",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/image-component.js": {
+    "(app-client)/./src/assets/newThree.png": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/image-component.js",
+        "id": "(sc_client)/./src/assets/newThree.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/assets/manyStudents.png": {
+      "*": {
+        "id": "(sc_client)/./src/assets/manyStudents.png",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -160,14 +176,6 @@
         "async": false
       }
     },
-    "(app-client)/./src/components/Sidemenu/Sidemenu.tsx": {
-      "*": {
-        "id": "(sc_client)/./src/components/Sidemenu/Sidemenu.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./src/components/Navbar/Navbar.tsx": {
       "*": {
         "id": "(sc_client)/./src/components/Navbar/Navbar.tsx",
@@ -176,17 +184,9 @@
         "async": false
       }
     },
-    "(app-client)/./src/assets/newThree.png": {
+    "(app-client)/./src/components/Sidemenu/Sidemenu.tsx": {
       "*": {
-        "id": "(sc_client)/./src/assets/newThree.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./src/assets/manyStudents.png": {
-      "*": {
-        "id": "(sc_client)/./src/assets/manyStudents.png",
+        "id": "(sc_client)/./src/components/Sidemenu/Sidemenu.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -275,11 +275,19 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page.tsx": {
-      "id": "(app-client)/./src/app/page.tsx",
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\styles\\globals.css": {
+      "id": "(app-client)/./src/styles/globals.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -296,6 +304,30 @@
       "name": "*",
       "chunks": [
         "app/about_us/Strategy/page:static/chunks/app/about_us/Strategy/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\newThree.png": {
+      "id": "(app-client)/./src/assets/newThree.png",
+      "name": "*",
+      "chunks": [
+        "app/about_us/Strategy/page:static/chunks/app/about_us/Strategy/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\manyStudents.png": {
+      "id": "(app-client)/./src/assets/manyStudents.png",
+      "name": "*",
+      "chunks": [
+        "app/about_us/Strategy/page:static/chunks/app/about_us/Strategy/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page.tsx": {
+      "id": "(app-client)/./src/app/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
@@ -411,14 +443,6 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
-      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
-      "name": "*",
-      "chunks": [
-        "app/about_us/layout:static/chunks/app/about_us/layout.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Navbar\\Navbar.tsx": {
       "id": "(app-client)/./src/components/Navbar/Navbar.tsx",
       "name": "*",
@@ -427,49 +451,25 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\newThree.png": {
-      "id": "(app-client)/./src/assets/newThree.png",
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
+      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
       "name": "*",
       "chunks": [
-        "app/about_us/Strategy/page:static/chunks/app/about_us/Strategy/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\manyStudents.png": {
-      "id": "(app-client)/./src/assets/manyStudents.png",
-      "name": "*",
-      "chunks": [
-        "app/about_us/Strategy/page:static/chunks/app/about_us/Strategy/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\styles\\globals.css": {
-      "id": "(app-client)/./src/styles/globals.css",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/about_us/layout:static/chunks/app/about_us/layout.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\layout": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\layout": [
       "static/css/app/layout.css"
     ],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\Organization\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\Campuses\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\layout": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\StackHolders\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\Campuses\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\Organization\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\Strategy\\page": []
   }
 }
