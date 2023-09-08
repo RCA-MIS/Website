@@ -33,6 +33,7 @@ import Numgraph from "../assets/vectors/Numgraph";
 const HomePage = () => {
   const counterRef = useRef(null);
   const [isInViewPort, setIsInViewPort] = useState(false);
+  const [newsPaper, setNewsPaper] = useState(null)
   let [years, setYears] = useState(0);
   let [projects, setProjects] = useState(0);
   let [graduates, setGraduates] = useState(0);
@@ -451,6 +452,7 @@ const HomePage = () => {
           </div>
           <div className="basis-1/2">
             <NewsComponent
+              setNewsPaper={setNewsPaper}
               date={"Sunday 24th September, 2020"}
               title="RCA wins at the National Level"
               content={
@@ -459,6 +461,7 @@ const HomePage = () => {
               image={img2}
             />
             <NewsComponent
+              setNewsPaper={setNewsPaper}
               date={"Sunday 24th September, 2020"}
               title="RCA wins at the National Level"
               content={
