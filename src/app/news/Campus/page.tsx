@@ -10,7 +10,7 @@ import newOne from "../../../assets/newOne.png"
 import newTwo from "../../../assets/newTwo.png"
 import newThree from "../../../assets/newThree.png"
 import newFour from "../../../assets/newFour.png"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
 import { StaticImageData } from "next/image"
 
@@ -25,18 +25,27 @@ interface singleNews{
     image: StaticImageData
 }
 
-export const fetchNews = async ()=>{
-    const res = await axios.get("http://194.163.167.131:8060/news/all", {
-        headers:{
-            authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
+const About = () => {
+    const [news, setNews] = useState([{
+        title: "",
+        content: "",
+        date: "",
+        image: newOne
+    }])
+    useEffect(()=>{
+       const fetchNews = async ()=>{
+            const res = await axios.get("http://194.163.167.131:8060/news/all", {
+                headers:{
+                    authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
+                }
+            })
+            
+            setNews(res.data)
+            return res.data
         }
-    })
-    
-    return res.data
-}
 
-const About = async () => {
-    const news = await fetchNews()
+        fetchNews()
+    })
     console.log("news noted", news)
     let newsArray = news || [
         {
@@ -104,7 +113,7 @@ const About = async () => {
                 <h4 className="text-[#523873] font-extrabold">Trending News</h4>
 
                 <div className="w-full overflow-y-auto">
-                    {newsArray.map((({news,index}: {news: any, index: any})=>{
+                    {newsArray.map(((news,index)=>{
                         return(
                             <News key={index} image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
                         )
