@@ -64,9 +64,9 @@ const About = () => {
                 <h4 className="text-[#523873] font-extrabold">Trending News</h4>
 
                 <div className="w-full overflow-y-auto">
-                    {news.map((news=>{
+                    {news.map(((news,index)=>{
                         return(
-                            <News image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
+                            <News key={index} image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
                         )
                     }))}
 

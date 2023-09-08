@@ -73,9 +73,9 @@ const Research = ()=>{
                     <h4 className="text-[#523873] font-extrabold">More Innovations</h4>
 
                     <div>
-                        {researchInnovations.map((newsComp)=>{
+                        {researchInnovations.map((newsComp, index)=>{
                             return(
-                                <News image={newsComp.image} date={newsComp.date} title={newsComp.title} content={newsComp.content} setPublication={setPublication}/>
+                                <News key={index} image={newsComp.image} date={newsComp.date} title={newsComp.title} content={newsComp.content} setPublication={setPublication}/>
                             )
                         })}
                     </div>

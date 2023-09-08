@@ -104,9 +104,9 @@ const About = async () => {
                 <h4 className="text-[#523873] font-extrabold">Trending News</h4>
 
                 <div className="w-full overflow-y-auto">
-                    {newsArray.map(((news:any)=>{
+                    {newsArray.map((({news,index}: {news: any, index: any})=>{
                         return(
-                            <News image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
+                            <News key={index} image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
                         )
                     }))}
 
