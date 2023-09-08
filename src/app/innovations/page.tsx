@@ -10,7 +10,7 @@ import axios from "axios"
 import { useState } from "react"
 // import { useInnovationsData } from "./InnovationContext"
 
-export const fetchInnovations = async ()=>{
+const fetchInnovations = async ()=>{
     const res = await axios.get("http://194.163.167.131:8060/projects/all", {
         headers:{
             authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
