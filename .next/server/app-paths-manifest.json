@@ -1,7 +1,8 @@
 {
-  "/news/Campus/page": "app/news/Campus/page.js",
-  "/news/In/page": "app/news/In/page.js",
-  "/news/Free/page": "app/news/Free/page.js",
-  "/news/Notice/page": "app/news/Notice/page.js",
-  "/news/Events/page": "app/news/Events/page.js"
+  "/alumni/page": "app/alumni/page.js",
+  "/alumni/Alumni/page": "app/alumni/Alumni/page.js",
+  "/alumni/Living/page": "app/alumni/Living/page.js",
+  "/alumni/Galley/page": "app/alumni/Galley/page.js",
+  "/alumni/contributions/page": "app/alumni/contributions/page.js",
+  "/academics/Graduates/page": "app/academics/Graduates/page.js"
 }
