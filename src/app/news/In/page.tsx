@@ -13,6 +13,8 @@ import newFour from "../../../assets/newFour.png"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { StaticImageData } from "next/image"
+import { url } from "@/src/utils/url"
+import { token } from "@/src/utils/url"
 
 interface Props{
     news: singleNews[]

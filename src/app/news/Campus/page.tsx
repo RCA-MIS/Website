@@ -13,6 +13,8 @@ import newFour from "../../../assets/newFour.png"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { StaticImageData } from "next/image"
+import { url } from "@/src/utils/url"
+import { token } from "@/src/utils/url"
 
 interface Props{
     news: singleNews[]
@@ -67,12 +69,13 @@ const About = () => {
     const [news, setNews] = useState(dummyNews)
     useEffect(()=>{
        const fetchNews = async ()=>{
-            const res = await axios.get("http://194.163.167.131:8060/news/all", {
+        // console.log(url)
+            const res = await axios.get(`${url}/news/all`, {
                 headers:{
-                    authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
+                    authorization: `Bearer ${token}`
                 }
             })
-            
+            console.log(res.data)
             setNews(res.data ? res.data : dummyNews)
             return res.data
         }
