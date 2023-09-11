@@ -37,7 +37,7 @@ const Navbar = () => {
                     <input className="w-[30px] focus:w-full px-2 pr-7 py-2 md:px-1 lg:px-4 bg-[#D9D9D9] rounded-md cursor-pointer"/>
                     <Image src={search} alt="" className="absolute top-4 right-1 md:right-5 w-6 h-6"/>
                 </div>
-                <div className="text-2xl md:hidden hover:cursor-pointer" onClick={()=>handleMenu()}>
+                <div className="mr-2 md:mr-0 text-2xl md:hidden hover:cursor-pointer" onClick={()=>handleMenu()}>
                     {showMenu?(<AiFillCloseCircle />):(  <AiOutlineMenu />)}
                   
                 </div>

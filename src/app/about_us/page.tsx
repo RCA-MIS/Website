@@ -7,7 +7,7 @@ import Image from "next/image"
 const About = ()=>{
 
     return (
-        <div className="w-full px-9">
+        <div className="w-full px-9" style={{ backgroundImage: `url(${require('../../assets/background.png')})` }}>
             <h5 className="font-extrabold mb-9">About   &gt;   <span className="text-[#523873]">Campuses and Facilities</span></h5>
 
             <p className="leading-[2rem] pb-3">Rwanda Coding Academy boasts state-of-the-art campuses equipped with cutting-edge facilities tailored to nurture the next generation of tech leaders. Our campuses are designed to create an immersive learning environment, featuring modern classrooms, collaborative workspaces, well-equipped computer labs, and high-speed internet connectivity. Additionally, students have access to extensive libraries, recreational areas, and cafeterias for a well-rounded educational experience. Our commitment to excellence extends to our environmentally sustainable campuses, reflecting our dedication to responsible tech education. These top-tier facilities provide students with the resources and infrastructure necessary to excel in their coding journey and shape a brighter future in the tech industry.</p>
