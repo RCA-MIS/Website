@@ -33,37 +33,43 @@ const About = () => {
             image: newOne,
             title:"World Bank Fund RCA tomorrow",
             content:"We're thrilled to share a notable accomplishment from our RCA community. .",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"news"
         },
         {
             image: newOne,
             title:"Experts from South Korea at RCA",
             content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"news"
         },
         {
             image: newOne,
             title:"RCA reaches the National level in Basketball",
             content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"events"
         },
         {
             image: newOne,
             title:"Year 3 students visit to RCAA",
             content:"A visit from the World Bank at RCA, showcasing the nurtured talents at the school.",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"events"
         },
         {
             image: newOne,
             title:"RCA at the 19th ILO Regional Seminar",
             content:"Two RCA students showcase their prototype application called “KUICK RENT”.",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"notice"
         },
         {
             image: newOne,
             title:"1st cohort  pF RCA participates in the NE",
             content:"At the first time RCA participates in the NE, it scores the highest nationwide",
-            date:"Sunday 24th September, 2020"
+            date:"Sunday 24th September, 2020",
+            category:"notice"
         },
     ]
     const [news, setNews] = useState(dummyNews)
@@ -76,12 +82,12 @@ const About = () => {
                 }
             })
             console.log(res.data)
-            setNews(res.data ? res.data : dummyNews)
+            setNews(res.data.length ? res.data : dummyNews)
             return res.data
         }
 
         fetchNews()
-    })
+    },[])
     let newsArray = news || [
         {
             image: newOne,
@@ -147,7 +153,11 @@ const About = () => {
                 <h4 className="text-[#523873] font-extrabold">Trending News</h4>
 
                 <div className="w-full overflow-y-auto">
-                    {newsArray.map(((news,index)=>{
+                    {newsArray
+                    .filter(news=>{
+                        return news.category == "news"
+                    })
+                    .map(((news,index)=>{
                         return(
                             <News key={index} image={news.image} date={news.date} title={news.title} content={news.content} setNewsPaper={setNewsPaper}/>
                         )

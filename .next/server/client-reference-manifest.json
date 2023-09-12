@@ -40,6 +40,22 @@
         "async": false
       }
     },
+    "(app-client)/./src/styles/globals.css": {
+      "*": {
+        "id": "(sc_client)/./src/styles/globals.css",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./node_modules/next/dist/client/image-component.js": {
       "*": {
         "id": "(sc_client)/./node_modules/next/dist/client/image-component.js",
@@ -72,17 +88,17 @@
         "async": false
       }
     },
-    "(app-client)/./src/app/page.tsx": {
+    "(app-client)/./node_modules/next/dist/client/link.js": {
       "*": {
-        "id": "(sc_client)/./src/app/page.tsx",
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./src/styles/globals.css": {
+    "(app-client)/./src/assets/playbutton.png": {
       "*": {
-        "id": "(sc_client)/./src/styles/globals.css",
+        "id": "(sc_client)/./src/assets/playbutton.png",
         "name": "*",
         "chunks": [],
         "async": false
@@ -184,14 +200,6 @@
         "async": false
       }
     },
-    "(app-client)/./src/assets/playbutton.png": {
-      "*": {
-        "id": "(sc_client)/./src/assets/playbutton.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./src/components/Navbar/Navbar.tsx": {
       "*": {
         "id": "(sc_client)/./src/components/Navbar/Navbar.tsx",
@@ -200,9 +208,49 @@
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
+    "(app-client)/./src/app/news/page.tsx": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/./src/app/news/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/news/Campus/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/news/Campus/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/news/In/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/news/In/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/news/Events/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/news/Events/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/news/Free/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/news/Free/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/news/Notice/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/news/Notice/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -291,11 +339,35 @@
       ],
       "async": false
     },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\styles\\globals.css": {
+      "id": "(app-client)/./src/styles/globals.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page.tsx": {
+      "id": "(app-client)/./src/app/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\dist\\client\\image-component.js": {
       "id": "(app-client)/./node_modules/next/dist/client/image-component.js",
       "name": "*",
       "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
+        "app/news/layout:static/chunks/app/news/layout.js"
       ],
       "async": false
     },
@@ -303,7 +375,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image-component.js",
       "name": "*",
       "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
+        "app/news/layout:static/chunks/app/news/layout.js"
       ],
       "async": false
     },
@@ -331,147 +403,11 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page.tsx": {
-      "id": "(app-client)/./src/app/page.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\font\\google\\target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"200\",\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"]}],\"variableName\":\"poppins\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\styles\\globals.css": {
-      "id": "(app-client)/./src/styles/globals.css",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\facebook.png": {
-      "id": "(app-client)/./src/assets/facebook.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\github.png": {
-      "id": "(app-client)/./src/assets/github.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\instagram.png": {
-      "id": "(app-client)/./src/assets/instagram.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\reddit.png": {
-      "id": "(app-client)/./src/assets/reddit.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\linkedin.png": {
-      "id": "(app-client)/./src/assets/linkedin.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\slack.png": {
-      "id": "(app-client)/./src/assets/slack.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\twitter.png": {
-      "id": "(app-client)/./src/assets/twitter.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\whatsapp.png": {
-      "id": "(app-client)/./src/assets/whatsapp.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\snapchat.png": {
-      "id": "(app-client)/./src/assets/snapchat.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\product.png": {
-      "id": "(app-client)/./src/assets/product.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\evernote.png": {
-      "id": "(app-client)/./src/assets/evernote.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
-      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\playbutton.png": {
-      "id": "(app-client)/./src/assets/playbutton.png",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Navbar\\Navbar.tsx": {
-      "id": "(app-client)/./src/components/Navbar/Navbar.tsx",
-      "name": "*",
-      "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\node_modules\\next\\dist\\client\\link.js": {
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
+        "app/news/layout:static/chunks/app/news/layout.js"
       ],
       "async": false
     },
@@ -479,21 +415,188 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/academics/layout:static/chunks/app/academics/layout.js"
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\playbutton.png": {
+      "id": "(app-client)/./src/assets/playbutton.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\facebook.png": {
+      "id": "(app-client)/./src/assets/facebook.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\github.png": {
+      "id": "(app-client)/./src/assets/github.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\instagram.png": {
+      "id": "(app-client)/./src/assets/instagram.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\reddit.png": {
+      "id": "(app-client)/./src/assets/reddit.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\linkedin.png": {
+      "id": "(app-client)/./src/assets/linkedin.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\slack.png": {
+      "id": "(app-client)/./src/assets/slack.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\twitter.png": {
+      "id": "(app-client)/./src/assets/twitter.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\whatsapp.png": {
+      "id": "(app-client)/./src/assets/whatsapp.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\snapchat.png": {
+      "id": "(app-client)/./src/assets/snapchat.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\product.png": {
+      "id": "(app-client)/./src/assets/product.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\evernote.png": {
+      "id": "(app-client)/./src/assets/evernote.png",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
+      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Navbar\\Navbar.tsx": {
+      "id": "(app-client)/./src/components/Navbar/Navbar.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\page.tsx": {
+      "id": "(app-client)/./src/app/news/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/page:static/chunks/app/news/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Campus\\page.tsx": {
+      "id": "(app-client)/./src/app/news/Campus/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/Campus/page:static/chunks/app/news/Campus/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\In\\page.tsx": {
+      "id": "(app-client)/./src/app/news/In/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/In/page:static/chunks/app/news/In/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Events\\page.tsx": {
+      "id": "(app-client)/./src/app/news/Events/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/Events/page:static/chunks/app/news/Events/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Free\\page.tsx": {
+      "id": "(app-client)/./src/app/news/Free/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/Free/page:static/chunks/app/news/Free/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Notice\\page.tsx": {
+      "id": "(app-client)/./src/app/news/Notice/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/Notice/page:static/chunks/app/news/Notice/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page": [
-      "static/css/app/page.css"
-    ],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\layout": [
       "static/css/app/layout.css"
     ],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\page": [
+      "static/css/app/page.css"
+    ],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\layout": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\layout": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\layout": []
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\layout": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Campus\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\In\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Events\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Free\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Notice\\page": []
   }
 }

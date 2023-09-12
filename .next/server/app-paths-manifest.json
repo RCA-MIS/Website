@@ -1,4 +1,9 @@
 {
-  "/page": "app/page.js",
-  "/about_us/page": "app/about_us/page.js"
+  "/about_us/page": "app/about_us/page.js",
+  "/news/page": "app/news/page.js",
+  "/news/Campus/page": "app/news/Campus/page.js",
+  "/news/Notice/page": "app/news/Notice/page.js",
+  "/news/Events/page": "app/news/Events/page.js",
+  "/news/In/page": "app/news/In/page.js",
+  "/news/Free/page": "app/news/Free/page.js"
 }
