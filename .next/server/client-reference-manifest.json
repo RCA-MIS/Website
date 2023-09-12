@@ -96,14 +96,6 @@
         "async": false
       }
     },
-    "(app-client)/./src/assets/playbutton.png": {
-      "*": {
-        "id": "(sc_client)/./src/assets/playbutton.png",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./src/assets/facebook.png": {
       "*": {
         "id": "(sc_client)/./src/assets/facebook.png",
@@ -192,9 +184,9 @@
         "async": false
       }
     },
-    "(app-client)/./src/components/Sidemenu/Sidemenu.tsx": {
+    "(app-client)/./src/assets/playbutton.png": {
       "*": {
-        "id": "(sc_client)/./src/components/Sidemenu/Sidemenu.tsx",
+        "id": "(sc_client)/./src/assets/playbutton.png",
         "name": "*",
         "chunks": [],
         "async": false
@@ -203,6 +195,14 @@
     "(app-client)/./src/components/Navbar/Navbar.tsx": {
       "*": {
         "id": "(sc_client)/./src/components/Navbar/Navbar.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/Sidemenu/Sidemenu.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/Sidemenu/Sidemenu.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -248,9 +248,49 @@
         "async": false
       }
     },
+    "(app-client)/./src/app/innovations/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/innovations/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./src/app/news/Notice/page.tsx": {
       "*": {
         "id": "(sc_client)/./src/app/news/Notice/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/innovations/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/innovations/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/innovations/Research/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/innovations/Research/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/innovations/Startups/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/innovations/Startups/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/innovations/Fundarisations/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/innovations/Fundarisations/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -419,14 +459,6 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\playbutton.png": {
-      "id": "(app-client)/./src/assets/playbutton.png",
-      "name": "*",
-      "chunks": [
-        "app/news/layout:static/chunks/app/news/layout.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\facebook.png": {
       "id": "(app-client)/./src/assets/facebook.png",
       "name": "*",
@@ -515,8 +547,8 @@
       ],
       "async": false
     },
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
-      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\assets\\playbutton.png": {
+      "id": "(app-client)/./src/assets/playbutton.png",
       "name": "*",
       "chunks": [
         "app/news/layout:static/chunks/app/news/layout.js"
@@ -525,6 +557,14 @@
     },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Navbar\\Navbar.tsx": {
       "id": "(app-client)/./src/components/Navbar/Navbar.tsx",
+      "name": "*",
+      "chunks": [
+        "app/news/layout:static/chunks/app/news/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\components\\Sidemenu\\Sidemenu.tsx": {
+      "id": "(app-client)/./src/components/Sidemenu/Sidemenu.tsx",
       "name": "*",
       "chunks": [
         "app/news/layout:static/chunks/app/news/layout.js"
@@ -571,11 +611,51 @@
       ],
       "async": false
     },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\layout.tsx": {
+      "id": "(app-client)/./src/app/innovations/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/innovations/layout:static/chunks/app/innovations/layout.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Notice\\page.tsx": {
       "id": "(app-client)/./src/app/news/Notice/page.tsx",
       "name": "*",
       "chunks": [
         "app/news/Notice/page:static/chunks/app/news/Notice/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\page.tsx": {
+      "id": "(app-client)/./src/app/innovations/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/innovations/page:static/chunks/app/innovations/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Research\\page.tsx": {
+      "id": "(app-client)/./src/app/innovations/Research/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/innovations/Research/page:static/chunks/app/innovations/Research/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Startups\\page.tsx": {
+      "id": "(app-client)/./src/app/innovations/Startups/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/innovations/Startups/page:static/chunks/app/innovations/Startups/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Fundarisations\\page.tsx": {
+      "id": "(app-client)/./src/app/innovations/Fundarisations/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/innovations/Fundarisations/page:static/chunks/app/innovations/Fundarisations/page.js"
       ],
       "async": false
     }
@@ -588,8 +668,8 @@
       "static/css/app/page.css"
     ],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\layout": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\about_us\\layout": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\layout": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\academics\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\layout": [],
@@ -597,6 +677,11 @@
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\In\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Events\\page": [],
     "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Free\\page": [],
-    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Notice\\page": []
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\layout": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\news\\Notice\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Research\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Startups\\page": [],
+    "C:\\Users\\David\\Desktop\\frontEnd-service\\frontEnd-service\\src\\app\\innovations\\Fundarisations\\page": []
   }
 }

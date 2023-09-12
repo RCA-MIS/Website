@@ -7,20 +7,23 @@ import newTwo from "../../../assets/newTwo.png"
 import newThree from "../../../assets/newThree.png"
 import Image from "next/image"
 import axios from "axios"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { url, token } from "@/src/utils/url"
 // import { useInnovationsData } from "./InnovationContext"
 
 const fetchInnovations = async ()=>{
-    const res = await axios.get("http://194.163.167.131:8060/projects/all", {
+    const res = await axios.get(`${url}/projects/all`, {
         headers:{
-            authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
+            authorization: `Bearer ${token}`
         }
     })
     const projData = res.data;
+    console.log(projData)
     return projData
 }
 
-let news =[
+
+let news = [
     {
         image: newOne,
         title:"Robotics on a roll here in Rwanda Coding Academy",
@@ -46,8 +49,15 @@ let news =[
 
 
 const Research = ()=>{
-    // const innovations = useInnovationsData()
-    // console.log(innovations,"these are from the context")
+    const [projectInnovations, setProjectInnovations] = useState([])
+    useEffect(()=>{
+        const projects = fetchInnovations()
+        projects.then(res=>{
+
+            setProjectInnovations(res.length ? res: news)
+        })
+    },[])
+
     const researchInnovations = news.filter(single=>{
         return single.category == "research" || single.category == undefined
     })
@@ -55,7 +65,7 @@ const Research = ()=>{
     return(
         <div className="w-full">
 
-            <h5 className="font-bold mb-4 ml-4">Innovation Hub &gt; <Link href={"/"} className="text-[#523873]">Research and publications</Link></h5>
+            <h5 className="font-bold mb-4 ml-4">Innovation Hub &gt; <Link href={"/"} className="text-[#523873]">Research</Link></h5>
             <div className="w-full md:h-[50vh] flex justify-evenly px-2 flex-col md:flex-row">
                 <div className="w-full md:w-1/2 h-full bg-[#f8f8f8] mx-1">
                     <Image src={newTwo} alt="student" className="w-full rounded-lg" />

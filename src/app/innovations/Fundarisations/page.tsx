@@ -7,20 +7,23 @@ import newTwo from "../../../assets/newTwo.png"
 import newThree from "../../../assets/newThree.png"
 import Image from "next/image"
 import axios from "axios"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { url, token } from "@/src/utils/url"
 // import { useInnovationsData } from "./InnovationContext"
 
 const fetchInnovations = async ()=>{
-    const res = await axios.get("http://194.163.167.131:8060/projects/all", {
+    const res = await axios.get(`${url}/projects/all`, {
         headers:{
-            authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W3siY3JlYXRlZEF0IjoiMjAyMy0wOS0wM1QxOTozMjozNS4zOTlaIiwidXBkYXRlZEF0IjoiMjAyMy0wOS0wM1QyMTozMzowMC40ODlaIiwiaWQiOjEsInJvbGVfbmFtZSI6IlNUVURFTlQifV0sImlkIjoxLCJuYXRpb25hbF9pZCI6IjgyNzQwOTcyMDM0NzA0NzkiLCJpYXQiOjE2OTM3Nzk5NDMsImV4cCI6MTY5Mzc4MDU0M30.-F-L8hJH9ZrcR75v696NT0-S1zZeldvX4AG4KGCUVbI"
+            authorization: `Bearer ${token}`
         }
     })
     const projData = res.data;
+    console.log(projData)
     return projData
 }
 
-let news =[
+
+let news = [
     {
         image: newOne,
         title:"Robotics on a roll here in Rwanda Coding Academy",
@@ -46,6 +49,14 @@ let news =[
 
 
 const Research = ()=>{
+    const [projectInnovations, setProjectInnovations] = useState([])
+    useEffect(()=>{
+        const projects = fetchInnovations()
+        projects.then(res=>{
+
+            setProjectInnovations(res.length ? res: news)
+        })
+    },[])
 
     const researchInnovations = news.filter(single=>{
         return single.category == "fundraisation" || single.category == undefined
