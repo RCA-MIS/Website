@@ -24,9 +24,7 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.png'/>
       </head>
       <body className={poppins.className}>
-        {/* <Navbar/> */}
         {children}
-        {/* <Footer/> */}
       </body>
     </html>
   )
