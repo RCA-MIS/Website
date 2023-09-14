@@ -386,7 +386,7 @@ const HomePage = () => {
               </p>
               <Button
                 text="Know Even More About Our Curriculium"
-                className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-4/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0  "
+                className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-4/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg flex justify-between "
                 icon={<FaArrowRight />}
 
               />
@@ -477,7 +477,7 @@ const HomePage = () => {
             <div className="w-full flex  justify-start">
             <Button
               text="Read More of Our News"
-              className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-2/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0 "
+              className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-2/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg flex justify-between"
               icon={<FaArrowRight />}
             />
             </div>
@@ -508,7 +508,7 @@ const HomePage = () => {
                   <Button
                     text="Subscribe Now"
                     icon={<FaArrowRight />}
-                    className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-1/3 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0 "
+                    className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-1/3 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg flex justify-between"
                   />
                 </form>
               </div>

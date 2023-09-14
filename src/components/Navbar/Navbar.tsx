@@ -26,7 +26,7 @@ const Navbar = () => {
 
                 <span className="flex gap-1"><Link href={"https://rca-app.vercel.app/"}>Student</Link> / <Link href={"https://rca-app.vercel.app/"}>Staff Portal</Link></span>
             </div>
-            <div className={`w-full flex justify-between lg:px-6 md:px-1   items-center ${scroll ? 'fixed top-[1px] bg-white z-40 shadow-md text-purpleColor py-2':'lower-navbar text-white py-6'} z-40`}>
+            <div className={`w-full flex justify-between lg:px-6 md:px-1   items-center ${scroll ? 'fixed top-[0.2px] bg-white z-40 shadow-md text-purpleColor py-2':'lower-navbar text-white py-6'} z-40`}>
                 <div  className={`${scroll && 'bg-gradient-to-b from-purpleColor to-white outline-none p-4 rounded-[20px]'}`}>
                 <Link href={"/"}><Image src={logo} alt={""} /></Link>
                 </div>
