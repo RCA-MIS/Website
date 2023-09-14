@@ -1,7 +1,7 @@
 {
-  "/innovations/page": "app/innovations/page.js",
-  "/news/Free/page": "app/news/Free/page.js",
-  "/innovations/Fundarisations/page": "app/innovations/Fundarisations/page.js",
-  "/innovations/Research/page": "app/innovations/Research/page.js",
-  "/innovations/Startups/page": "app/innovations/Startups/page.js"
+  "/page": "app/page.js",
+  "/alumni/page": "app/alumni/page.js",
+  "/admissions/page": "app/admissions/page.js",
+  "/news/page": "app/news/page.js",
+  "/contact_us/Contacts/page": "app/contact_us/Contacts/page.js"
 }

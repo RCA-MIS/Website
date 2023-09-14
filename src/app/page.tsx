@@ -11,8 +11,8 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType} from 'swiper';
 import Button from "../components/Button";
-import Slider from "react-touch-drag-slider";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import "../styles/globals.css";
@@ -46,6 +46,7 @@ import { swipersInfo } from "../data";
 import SwiperPage from "../components/Swiper";
 import Trapezium from "../assets/vectors/Trapezium";
 const HomePage = () => {
+  const swiperRef = useRef<SwiperType>();
   const counterRef = useRef(null);
   const [isInViewPort, setIsInViewPort] = useState(false);
   let [years, setYears] = useState(0);
@@ -53,8 +54,8 @@ const HomePage = () => {
   let [graduates, setGraduates] = useState(0);
   let [partner, setPartner] = useState(0);
   const partners: string[] = [
-    "/images/studentOne.png",
-    "/images/studentOne.png",
+    "images/studentsOne.png",
+    "images/studentsOne.png",
   ];
   const sliders: StaticImageData[] = [mainImg, img2];
   const swiper = new SwiperNavigation(sliders);
@@ -146,10 +147,10 @@ const HomePage = () => {
           {/* Stake holder */}
           <div className="w-full bg-white ">
             <div className="md:space-y-8 space-y-4 py-2 md:py-12">
-              <h3 className="text-textGray text-center text-2xl font-semibold">
+              <h3 className="p-4 md:p-0text-textGray md:text-center text-2xl font-semibold">
                 Stakeholders and partners
               </h3>
-              <p className="text-start sm:text-center text-md text-[#4343436E] px-[50px] xl:px-[250px]">
+              <p className="p-4 md:p-0 text-start md:text-center text-md text-[#4343436E] md:px-[50px] xl:px-[250px]">
                 Our Strong Collaborative Network: Rwanda Coding Academy is proud to
                 be backed by esteemed partners and shareholders,including the
                 African Development Bank, World Bank, KOICA, MINICT (Ministry of
@@ -175,7 +176,7 @@ const HomePage = () => {
             <div className="w-full lg:flex ">
               <div className="basis-1/2 bg-white relative py-12 px-12 sm:px-28 ">
                 <div className="h-[315px]  sm:h-[450px] md:h-[630px] lg:h-[430px] w-[290px] sm:w-[390px] md:w-[450px] lg:w-[320px] xl:w-[581px] relative">
-                  <Image src={mainImg} fill alt="img1" />
+                  <Image src={mainImg} fill alt="img1" className="rounded-2xl"/>
                 </div>
                 <div className="h-[200px] sm:h-[320px] lg:h-[190px] md:h-[400px] xl:h-[270px] w-[157px] sm:w-[277px] md:w-[304px] lg:w-[250px] xl:w-[404px] absolute z-20 -translate-y-[270px] lg:-translate-y-[270px] sm:-translate-y-[390px] md:-translate-y-[550px] xl:-translate-y-[350px] translate-x-[175px] md:translate-x-[320px] lg:translate-x-[150px] xl:translate-x-[250px] border-8 rounded border-white ">
                   <Image src={img2} alt="img2" className="rounded-2xl" fill />
@@ -229,7 +230,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-          <div className="w-full md:flex relative bg-[#523873]/10  translate-y-8 sm:translate-y-12">
+          <div className="w-full md:flex relative bg-[#523873]/10 lg:h-[50vh] translate-y-8 sm:translate-y-12">
             <div className="basis-1/2 p-8 space-y-2">
               <p className="text-purpleColor font-medium text-lg  text-start ">
                 INNOVATION HUB
@@ -254,31 +255,35 @@ const HomePage = () => {
             </div>
             <div className="basis-1/2 ">
               <div className="w-full flex-col">
-                <div className="w-full relative flex flex-col">
-                  <Trapezium />
-                  <div className="w-[300px] sm:w-[470px] md:w-[70%] lg:w-[70%] xl:w-[70%]  2xl:w-[70%] md:h-[250px] lg:h-[300px] top-16 h-[300px] sm:h-[400px]  md:top-8 lg:top-24 left-12 xl:left-2  rounded-xl absolute bg-white flex items-center px-4 justify-between">
-                    <div className="hover:cursor-pointer border-2 border-purplecolor h-8 w-8 rounded-full bg-white z-20 -ml-8 flex items-center justify-center text-purpleColor">
+                <div className="w-full relative flex flex-col ">
+                  <div className="w-[300px] sm:w-[470px] md:w-[70%] lg:w-[70%] xl:w-[70%]  2xl:w-[70%] md:h-[250px] lg:h-[300px] h-[300px] sm:h-[400px]  md:top-8 top-20 lg:top-8 left-12 xl:left-2  rounded-xl absolute bg-white flex items-center px-4 justify-between">
+                    <div className="hover:cursor-pointer border-2 border-purplecolor h-8 w-8 rounded-full bg-white z-20 -ml-8 flex items-center justify-center text-purpleColor" onClick={() => swiperRef.current?.slidePrev()}>
                       <FaChevronLeft />
                     </div>
                     <div className="relative w-[80%] h-[75%]">
                       <Swiper
                         autoplay={true}
                         modules={[Navigation, Autoplay]}
+
                         className="mySwiper"
+                        onBeforeInit={(swiper) => {
+                          swiperRef.current = swiper;
+                        }}
                       >
                         {partners.map((partner, index) => {
                           return (
-                            <SwiperSlide>
-                              <img src={partner} key={index} />
+                            <SwiperSlide key={index}>
+                              <img src={partner} alt="image" />
                             </SwiperSlide>
                           );
                         })}
                       </Swiper>
                     </div>
-                    <div className="hover:cursor-pointer border-2 border-purplecolor h-8 w-8 rounded-full bg-white z-20 -mr-8 flex items-center justify-center text-purpleColor">
+                    <div className="hover:cursor-pointer border-2 border-purplecolor h-8 w-8 rounded-full bg-white z-20 -mr-8 flex items-center justify-center text-purpleColor" onClick={() => swiperRef.current?.slideNext()}>
                       <FaChevronRight />
                     </div>
                   </div>
+                  <Trapezium />
                 </div>
                 </div>
               </div>
@@ -300,7 +305,7 @@ const HomePage = () => {
               in the Tech industry of Rwanda.
             </p>
             <div className="flex-col relative">
-              <div className="hidden 2xl:flex absolute w-3/4 lg:h-2/3  -translate-y-[70px] xl:translate-y-[280px]  items-center justify-start ml-4 xl:ml-36 ">
+              <div className="hidden 2xl:flex absolute w-[100%] lg:h-[100%] -translate-y-36 justify-start ml-20">
                 <Pathvec />
               </div>
               <div className=" px-4 xl:px-32  md:space-y-[40px] xl:space-y-[200px]">
@@ -332,7 +337,7 @@ const HomePage = () => {
                       <div className="font-bold text-purpleColor/10 text-6xl basis-1/2 text-end md:border-0 border-2 border-purpleColor flex items-center justify-center rounded-full md:w-0 w-16 md:h-0 h-16 mx-auto border-dashed">
                         {path.id}
                       </div>
-                      <div className="w-20 h-20 rounded-full bg-purpleColor border-2 border-white flex mx-auto hidden 2xl:block"></div>
+                      <div className="w-24 h-20 rounded-full bg-purpleColor border-2 border-white mr-[250px] hidden 2xl:block"></div>
                       <div className="basis-1/3 space-y-8">
                         <p className="text-purpleColor font-semibold text-xl">
                           {path.title}
@@ -346,7 +351,7 @@ const HomePage = () => {
             </div>
           </div>
           {/* Core study  and research fields */}
-          <div className="w-full bg-[#523873]/10 md:flex px-12 py-8 translate-y-64 lg:gap-8 h-[1100px]">
+          <div className="w-full bg-[#523873]/10 md:flex px-4 md:px-12 py-8  mt-40 lg:gap-8 h-[100%]">
             <div className="basis-2/3 space-y-12">
               <p className="text-purpleColor font-medium text-lg ">
                 CORE STUDY AND RESEARCH FILEDS
@@ -381,13 +386,13 @@ const HomePage = () => {
               </p>
               <Button
                 text="Know Even More About Our Curriculium"
-                className="bg-purpleColor w-2/3 md:w-2/4 flex justify-between p-4 py-4 rounded-lg text-white "
+                className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-4/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0  "
                 icon={<FaArrowRight />}
 
               />
             </div>
-            <div className="basis-1/3 relative">
-              <div className="absolute z-40 w-full h-full space-y-2">
+            <div className="basis-1/3 relative over hidden md:block">
+              <div className="absolute z-20 w-full h-[1100px] space-y-2 ">
                 <div className="bg-white h-[20%]   sm:mt-8 relative px-12 rounded-lg">
                   <Image src={mainImg} fill alt="image" className="rounded-lg"/>
                 </div>
@@ -404,7 +409,7 @@ const HomePage = () => {
             </div>
           </div>
           {/* Our Numbers */}
-          <div className="bg-white w-full translate-y-36 ">
+          <div className="bg-white w-full mt-[500px]">
             <p className="text-purpleColor font-medium text-lg pt-6 md:pl-12 pl-4">
               OUR NUMBERS
             </p>
@@ -412,7 +417,7 @@ const HomePage = () => {
               Lets Get To Numbers
             </p>
             <div className="bg-purpleColor relative flex-col ">
-              <div className="w-full hidden  sm:flex justify-end items-end">
+              <div className="w-full  sm:flex justify-end items-end">
                 <Numgraph />
               </div>
               <div
@@ -472,14 +477,14 @@ const HomePage = () => {
             <div className="w-full flex  justify-start">
             <Button
               text="Read More of Our News"
-              className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-1/4 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0 "
+              className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-2/12 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0 "
               icon={<FaArrowRight />}
             />
             </div>
           </div>
           {/* OUR NEWS LETTER */}
-          <div className="w-full bg-white p-8 space-y-8 mb-20 lg:translate-y-0 ">
-            <div className="w-full lg:flex">
+          <div className="w-full bg-white p-1 space-y-8 mb-20 lg:translate-y-0 translate-y-32 ">
+            <div className="w-full md:flex">
               <div className="basis-1/2 space-y-8">
                 <p className="text-purpleColor font-medium text-lg pt-6 xl:pl-12 pl-2">
                   OUR NEWS LETTER
@@ -487,7 +492,7 @@ const HomePage = () => {
                 <p className="text-textGray font-semibold text-3xl xl:pl-12 pl-2">
                   Subscribe To Our Daily News Letter
                 </p>
-                <p className="text-[#4343436E] text-md text-start xl:pl-12 pl-2">
+                <p className="text-[#4343436E] text-md text-start xl:pl-12 pl-2 flex-wrap">
                   Stay Informed with the Rwanda Coding Academy Newsletter. Get the
                   latest school updates, achievements, and insights delivered
                   directly to your inbox. Don't miss out on our journey of
@@ -498,21 +503,21 @@ const HomePage = () => {
                   <input
                     type="email"
                     placeholder="Email Address"
-                    className="py-3 pl-4 bg-textGray/10 lg:w-full w-full rounded-lg border-2 outline-none"
+                    className="py-3 pl-4 bg-textGray/10 w-full md:w-2/4 lg:w-2/3 rounded-lg border-2 outline-none"
                   />
                   <Button
                     text="Subscribe Now"
                     icon={<FaArrowRight />}
-                    className="lg:px-12 px-6 space-x-12 py-3 rounded-lg bg-purpleColor w-2/4 lg:w-auto text-white text-lg"
+                    className="xl:px-12 px-6 w-full sm:w-2/3 md:w-1/3 md:mx-0 lg:w-1/3 space-x-12 py-4 rounded-lg bg-purpleColor mx-auto text-white text-lg translate-y-36 sm:translate-y-0 "
                   />
                 </form>
               </div>
-              <div className="basis-1/2 bg-white relative py-12 lg:px-28 px-12">
-                <div className="lg:h-[330px] xl:h-[400px] h-[200px] md:h-[330px] md:w-[240px] lg:w-[250px] xl:w-[250px] w-[157px] absolute z-20 translate-y-[50px] md:translate-x-[350px] lg:translate-y-[90px] xl:translate-y-[50px] lg:translate-x-[190px] xl:translate-x-[280px] translate-x-[150px] border-8 rounded-3xl border-white ">
-                  <Image src={img2} alt="img2" className="rounded-2xl rounded-lg" fill />
-                </div>
-                <div className=" md:h-[480px] lg:h-[500px] h-[315px] md:w-[400px] lg:w-[350px] w-[245px] relative">
+              <div className="basis-1/2 bg-white relative py-12 lg:px-28 px-12 flex justify-center md:justify-end lg:justify-center ">
+                <div className=" md:h-[100%] lg:h-[400px] h-[315px] md:w-[50%] lg:w-[80%] xl:w-[50%] w-[60%] relative ">
                   <Image src={mainImg} fill alt="img1" className="rounded-lg"/>
+                </div>
+                <div className="lg:h-[330px] h-[200px] md:h-[40%] md:w-[60%] lg:w-[45%] xl:w-[250px] w-[45%] absolute -translate-x-[60%] md:-translate-x-[140px] lg:-translate-x-[160px] translate-y-12 z-20 border-8 rounded-3xl border-white ">
+                  <Image src={img2} alt="img2" className="rounded-2xl " fill />
                 </div>
               </div>
             </div>

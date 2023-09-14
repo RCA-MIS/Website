@@ -8,18 +8,28 @@ import { useState } from "react"
 
 const Navbar = () => {
     const [showMenu,setShowMenu] = useState(false)
+    const [scroll, setScroll] = useState(false);
     const handleMenu = ()=>{
         setShowMenu((prev)=>!prev)
     }
+    document.onscroll = (e) => {
+        if (window.scrollY > 140) {
+            setScroll(true);
+        } else {
+            setScroll(false);
+        }
+    }
     return (
-        <div className="w-full">
+        <div className="w-full ">
             <div className="upper-container w-full sm:flex justify-between px-9 py-2">
                 <Link className="text-lg" href={"/"}>Welcome to <span className="text-purpleColor">Rwanda Coding Academy</span></Link>
 
-                <span className="flex gap-1"><Link href={"https://rca-student.vercel.app/"}>Student</Link> / <Link href={"https://mis-app-lake.vercel.app/"}>Staff Portal</Link></span>
+                <span className="flex gap-1"><Link href={"https://rca-app.vercel.app/"}>Student</Link> / <Link href={"https://rca-app.vercel.app/"}>Staff Portal</Link></span>
             </div>
-            <div className="w-full flex justify-between lg:px-6 md:px-1  lower-navbar py-6 items-center text-white">
+            <div className={`w-full flex justify-between lg:px-6 md:px-1   items-center ${scroll ? 'fixed top-[1px] bg-white z-40 shadow-md text-purpleColor py-2':'lower-navbar text-white py-6'} z-40`}>
+                <div  className={`${scroll && 'bg-gradient-to-b from-purpleColor to-white outline-none p-4 rounded-[20px]'}`}>
                 <Link href={"/"}><Image src={logo} alt={""} /></Link>
+                </div>
                 <div className="hidden md:flex md:gap-1 lg:gap-6 bg-[#]">
                     <Link href={"/about_us"}>
                         About&nbsp;us<span>| </span>
@@ -45,7 +55,7 @@ const Navbar = () => {
                 {/* </div> */}  
             </div>
             {showMenu &&(
-            <div className=" flex flex-col md:hidden bg-white z-40 divide-y-2 flex flex-col space-y-2 z-20 mb-4">
+            <div className=" flex flex-col md:hidden bg-white z-40 divide-y-2  space-y-2 mb-4">
                     <Link href={"/about_us"}>
                         About us
                     </Link>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
     "@next/font": "^13.4.9",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
@@ -26,6 +27,10 @@
     "react-touch-drag-slider": "^2.2.5",
     "swiper": "^10.2.0",
     "tailwindcss": "3.3.2",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "react-hook-form": "^7.46.1",
+    "react-hot-toast": "^2.4.1",
+    "react-spinners": "^0.13.8",
+    "yup": "^1.2.0"
   }
 }

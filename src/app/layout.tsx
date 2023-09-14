@@ -2,7 +2,10 @@ import '../styles/globals.css'
 import type { Metadata } from 'next'
 import Navbar from '@/src/components/Navbar/Navbar'
 import Footer from '@/src/components/Footer/Footer'
+import { Suspense } from 'react'
+import Loader from './loading'
 import { Poppins } from 'next/font/google'
+
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -12,6 +15,7 @@ export const metadata: Metadata = {
   title: 'Rwanda Coding Academy',
   description: 'This is an Excellence center focusing on promoting young Rwandan developers',
 }
+
 
 export default function RootLayout({
   children,
@@ -24,7 +28,9 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.png'/>
       </head>
       <body className={poppins.className}>
+        <Suspense fallback={<Loader />}>
         {children}
+        </Suspense>
       </body>
     </html>
   )

@@ -1,25 +1,38 @@
+
 export interface SwiperInfo {
     title: string;
-    subTitle: String;
+    subTitle?:string ;
     description: String;
     url: String;
 }
 export const swipersInfo: SwiperInfo[] = [
     {
-        title: " Leading Through Digital Innovation",
-        subTitle: "Rwanda Coding Academy",
-        description: "Fueling Rwanda's tech revolution! Open to all Rwandans post ordinary level. Elevate your prospects at the esteemed Rwanda Coding Academy—a beacon of excellence nationwide, nestled in Nyabihu District, Western Province",
-        url:"https://images.unsplash.com/photo-1568333261345-0918efdce2d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+        title:"Rwanda Coding Academy",
+        subTitle:"Welcome To Rwanda Coding Academy",
+        description:"Fueling Rwanda's tech revolution! Open to all Rwandans post ordinary level. Elevate your prospects at the esteemed Rwanda Coding Academy—a beacon of excellence nationwide, nestled in Nyabihu District, Western Province",
+        url:"/images/background.png"
+    },
+    {
+        title: " Collection OF EBooks",
+        subTitle:"Visit a wide variety of books on our platform",
+        description: "An e-book platform is a digital platform that facilitates the creation, distribution, and consumption of electronic books or e-books. These platforms have revolutionized the way we access and interact with written content.",
+        url:"/images/SlideImg1.jpg"
     }, {
-        title: " Leading Through Digital Innovation",
-        subTitle: "Rwanda Coding Academy",
-        description: "Fueling Rwanda's tech revolution! Open to all Rwandans post ordinary level. Elevate your prospects at the esteemed Rwanda Coding Academy—a beacon of excellence nationwide, nestled in Nyabihu District, Western Province",
-        url:"https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        title: "Ambassador of Israel in Rwanda Visits Rwanda Academy",
+        subTitle: "Strengthening Bilateral Ties through Education",
+        description: "In a significant diplomatic and educational outreach effort, Dr. Ron Adams, the Ambassador of Israel in Rwanda, paid a visit to the Rwanda Academy, marking a notable chapter in the growing relationship between the two nations. The visit ,which was characterized by collaboration, cultural exchange, and a shared commitment to advancing education and knowledge.",
+        url:"/images/SlideImg2.jpg"
     }
     , {
-        title: " Leading Through Digital Innovation",
-        subTitle: "Rwanda Coding Academy",
-        description: "Fueling Rwanda's tech revolution! Open to all Rwandans post ordinary level. Elevate your prospects at the esteemed Rwanda Coding Academy—a beacon of excellence nationwide, nestled in Nyabihu District, Western Province",
-        url:"https://images.unsplash.com/photo-1544640808-32ca72ac7f37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
-    }
+        title: " Rwanda Coding Academy Receives Generous Funding from Leading NGOs",
+        subTitle: "Empowering Tomorrow's Tech Leaders through Philanthropy",
+        description: "In a significant boost to Rwanda's technological ambitions, the Rwanda Coding Academy has received substantial financial support from several prominent non-governmental organizations (NGOs). This remarkable influx of funds, represents a pivotal moment for the academy and the nation's aspirations in the field of technology and education.",
+        url:"/images/SlideImg3.jpg"
+    },
+     {
+        title: " Rwanda Coding Academy's Inaugural Cohort Embarks on Inspiring Visit to DMM Hehe",
+        subTitle: "Exploring Innovation and Tech Entrepreneurship",
+        description: "On December 18, 2019, the pioneering students of Rwanda Coding Academy embarked on an eye-opening journey to DMM Hehe, a renowned tech company, marking a significant milestone in their educational journey. This visit, filled with enthusiasm and curiosity, allowed the academy's inaugural intake to gain firsthand insights into the world of technology, innovation, and entrepreneurship.",
+        url:"/images/SlideImg4.jpg"
+    },
 ]

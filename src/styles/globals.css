@@ -68,3 +68,28 @@ body{
 * {
   box-sizing: border-box;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.txtShadow{
+  text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
