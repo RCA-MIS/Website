@@ -14,7 +14,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { StaticImageData } from "next/image"
 import { url } from "@/src/utils/url"
-import { token } from "@/src/utils/url"
 
 interface Props{
     news: singleNews[]
@@ -75,11 +74,7 @@ const About = () => {
     const [news, setNews] = useState(dummyNews)
     useEffect(()=>{
        const fetchNews = async ()=>{
-            const res = await axios.get(`${url}/news/all`, {
-                headers:{
-                    authorization: `Bearer ${token}`
-                }
-            })
+            const res = await axios.get(`${url}/news/all`)
             console.log(res.data)
             setNews(res.data.length ? res.data : dummyNews)
             return res.data
