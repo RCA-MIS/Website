@@ -15,7 +15,6 @@ import { Swiper as SwiperType} from 'swiper';
 import Button from "../components/Button";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import "../styles/globals.css";
 import risa from "../assets/RISALogo.png";
 import rtb from "../assets/logo2.png";
 import giz from "../assets/gizLogo.png";

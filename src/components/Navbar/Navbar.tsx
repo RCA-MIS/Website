@@ -20,7 +20,7 @@ const Navbar = () => {
         }
     }
     return (
-        <div className="w-full ">
+        <div className="w-full " >
             <div className="upper-container w-full sm:flex justify-between px-9 py-2">
                 <Link className="text-lg" href={"/"}>Welcome to <span className="text-purpleColor">Rwanda Coding Academy</span></Link>
 

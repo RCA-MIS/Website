@@ -14,7 +14,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { StaticImageData } from "next/image"
 import { url } from "@/src/utils/url"
-import { token } from "@/src/utils/url"
 
 interface Props{
     news: singleNews[]
@@ -75,12 +74,7 @@ const About = () => {
     const [news, setNews] = useState(dummyNews)
     useEffect(()=>{
        const fetchNews = async ()=>{
-        // console.log(url)
-            const res = await axios.get(`${url}/news/all`, {
-                headers:{
-                    authorization: `Bearer ${token}`
-                }
-            })
+            const res = await axios.get(`${url}/news/all`)
             console.log(res.data)
             setNews(res.data.length ? res.data : dummyNews)
             return res.data
@@ -102,44 +96,7 @@ const About = () => {
             date:"Sunday 24th September, 2020"
         },
     ]
-    // const news = [
-    //     {
-    //         image: newOne,
-    //         title:"World Bank Fund RCA tomorrow",
-    //         content:"We're thrilled to share a notable accomplishment from our RCA community. Our fellows recently took first place in the prestigious Daiho Hackathon. Five students emerged victorious.This achievement demonstrates their commitment to learning and innovation, which reflects the high educational standards of our school.",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    //     {
-    //         image: newOne,
-    //         title:"Experts from South Korea at RCA",
-    //         content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    //     {
-    //         image: newOne,
-    //         title:"RCA reaches the National level in Basketball",
-    //         content:"Experts from South Korea have arrived at RCA training AI and Cyber-security.",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    //     {
-    //         image: newOne,
-    //         title:"Year 3 students visit to RCAA",
-    //         content:"A visit from the World Bank at RCA, showcasing the nurtured talents at the school.",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    //     {
-    //         image: newOne,
-    //         title:"RCA at the 19th ILO Regional Seminar",
-    //         content:"Two RCA students showcase their prototype application called “KUICK RENT”.",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    //     {
-    //         image: newOne,
-    //         title:"1st cohort  pF RCA participates in the NE",
-    //         content:"At the first time RCA participates in the NE, it scores the highest nationwide",
-    //         date:"Sunday 24th September, 2020"
-    //     },
-    // ]
+
     const [newsPaper, setNewsPaper] = useState(newsArray[0])
 
     return (
